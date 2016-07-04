@@ -11,7 +11,7 @@ TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
 WKHTMLTOPDF_URL="http://launchpadlibrarian.net/211978535/wkhtmltopdf_0.12.2.4-1_amd64.deb"
-WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
+WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf_0.12.2.4-1.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 
