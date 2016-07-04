@@ -25,7 +25,7 @@ echo "-----> Unpacking Debian package"
 dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
 
 echo "-----> Setting permissions"
-chmod +x $WKHTMLTOPDF_BINARIES/*
+chmod +x $WKHTMLTOPDF_PATH/*
 
 echo "-----> Moving binaries to the right place"
 mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
