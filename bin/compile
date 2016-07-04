@@ -13,7 +13,7 @@ mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 WKHTMLTOPDF_URL="http://launchpadlibrarian.net/211978535/wkhtmltopdf_0.12.2.4-1_amd64.deb"
 WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
-WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
+WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/bin"
 
 BIN_DIR=$(cd $(dirname $0); pwd)
 FONTS_DIR=$(cd "$BIN_DIR/../fonts"; pwd)
@@ -25,10 +25,10 @@ echo "-----> Unpacking Debian package"
 dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
 
 echo "-----> Setting permissions"
-chmod +x $WKHTMLTOPDF_PATH/*
+chmod +x $WKHTMLTOPDF_BINARIES/*
 
 echo "-----> Moving binaries to the right place"
-mv $WKHTMLTOPDF_PATH/* $BIN_PATH/
+mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
 
 echo "-----> Cleaning up"
 rm -rf $WKHTMLTOPDF_PATH
